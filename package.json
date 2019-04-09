@@ -1,0 +1,23 @@
+{
+  "name": "image-search-app",
+  "version": "1.0.0",
+  "description": "A simple image search app",
+  "main": "js/github.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BolajiAyodeji/image-search-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BolajiAyodeji/image-search-app/issues"
+  },
+  "homepage": "https://github.com/BolajiAyodeji/image-search-app#readme",
+  "dependencies": {
+    "dotenv": "^7.0.0"
+  }
+}
