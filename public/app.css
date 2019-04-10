@@ -7,7 +7,6 @@ body{
   background-size: cover;
   font-family: 'Roboto Mono';
 }
-
 a {
   text-decoration: none;
 }
@@ -19,7 +18,6 @@ a:hover {
   width: 50%;
   height: auto;
 }
-
 .search-container{
   justify-content: center;
   align-items: center;
@@ -30,7 +28,6 @@ a:hover {
   padding: 20px;
   justify-content: space-evenly;
 }
-
 input[type=text] {
   width: 85%;
   height: 50%;

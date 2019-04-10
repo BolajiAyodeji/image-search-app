@@ -7643,7 +7643,7 @@ function () {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return fetch("https://api.unsplash.com/search/photos/?client_id=".concat(this.access_key, "&per_page=20&orientation=landscape&query=").concat(query, "}"));
+                return fetch("https://api.unsplash.com/search/photos/?client_id=".concat(this.access_key, "&per_page=30&orientation=landscape&query=").concat(query, "}"));
 
               case 2:
                 responseData = _context.sent;

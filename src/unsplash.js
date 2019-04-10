@@ -9,7 +9,7 @@ class Unsplash {
 
   async getImage(query) {
     const responseData = await fetch
-    (`https://api.unsplash.com/search/photos/?client_id=${this.access_key}&per_page=20&orientation=landscape&query=${query}}`);
+    (`https://api.unsplash.com/search/photos/?client_id=${this.access_key}&per_page=30&orientation=landscape&query=${query}}`);
 
 
     let res = await responseData.json();

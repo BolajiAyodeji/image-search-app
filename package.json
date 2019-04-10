@@ -2,7 +2,7 @@
   "name": "image-search-app",
   "version": "1.0.0",
   "description": "A simple image search app",
-  "main": "js/github.js",
+  "main": "src/app.js",
   "scripts": {
     "build": "browserify src/app.js -t babelify --outfile public/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/BolajiAyodeji/image-search-app.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Bolaji Ayodeji",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/BolajiAyodeji/image-search-app/issues"
