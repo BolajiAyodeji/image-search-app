@@ -32,9 +32,9 @@ a:hover {
 }
 
 input[type=text] {
-  width: 80%;
+  width: 85%;
   height: 50%;
-  font-size: 25px;
+  font-size: 20px;
   color: #000;
   text-align: center;
   -webkit-transition: width 0.3s ease-in-out;
@@ -44,7 +44,7 @@ input[type=text] {
   border-radius: 25px;
 }
 input[type=text]:focus {
-  width: 90%;
+  width: 95%;
   outline: none;
 }
 ::placeholder {
