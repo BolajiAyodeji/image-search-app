@@ -2,6 +2,7 @@
 import "@babel/polyfill";
 import UI from './ui';
 import Unsplash from './unsplash';
+import * as serviceWorker from './sw';
 
 const unsplash = new Unsplash;
 const ui = new UI;
@@ -33,10 +34,4 @@ searchImg.addEventListener('keyup', (e) => {
   }
 })
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('./sw.js').then(function() {
-      console.log('Service Worker Registered')
-    })
-  })
-}
+serviceWorker.unregister();
