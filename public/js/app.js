@@ -1,25 +1,26 @@
 
-const github = new GitHub;
+const unsplash = new Unsplash;
 const ui = new UI;
 
-const searchUser = document.getElementById('searchUser');
+const searchImg = document.getElementById('searchImg');
 
-searchUser.addEventListener('keyup', (e) => {
-  const userText = e.target.value;
+searchImg.addEventListener('keyup', (e) => {
+  const searchQuery = e.target.value;
 
-  if(userText !== '') {
-    github.getUser(userText)
-      .then(data => {
-        if(data.profile.message === 'Not Found') {
-          ui.showAlert('User not found', 'alert alert-danger');
+  if(searchQuery !== '') {
+    unsplash.getImage(searchQuery)
+      .then(res => {
+        if(res.message === 'Not Found') {
+          console.log(res.image.message);
         }  else {
-          console.log(data);
+          console.log(res);
+          ui.showImage(res);
         }
       })
       .catch(err => {
-        ui.showAlert('Network error, check your connection and try again...', 'alert alert-danger');
+        console.log(err);
       })
   } else {
-    ui.clearProfile();
+    ui.clearImage();
   }
 })

@@ -4,49 +4,28 @@ class UI {
     this.results = document.getElementById('image-results');
   }
 
-  showProfile(query) {
-    this.results.innerHTML = `
-    <div className="image-results">
-              <div>
-                  <a href =${image.user.links.html} alt="${linktounsplash}" target="_blank">
-                  <img className="img-list" src=${image.urls.small} alt="searchresult"
-                       key=${image.id}/>
-                       <div class="middle">
-                          <p class="text">${image.user.username}</p>
-                      </div>
-                      </a>
-              </div>
-      </div>
-    `;
+  showImage(image) {
+    let output = '';
+
+    image.map((img) => {
+       output += `
+      <div class="image-results">
+        <div>
+          <a href ="${img.user.links.html}" alt="${img.links.self}" target="_blank">
+            <img class="img-list" src="${img.urls.small}" alt="${img.description}"
+              key=${img.id}/>
+              </a>
+              <p class="text">${img.user.username}</p>
+            <button class="btn btn-info"><a href="${img.links.download}"></a></button>
+                </div>
+        </div>
+      `;
+    });
+    this.results.innerHTML = output;
   }
 
 
-  showAlert(msg, cN) {
-    this.clearAlert();
-
-    const div = document.createElement('div');
-    div.className = cN;
-    div.appendChild(document.createTextNode(msg));
-
-    const container = document.querySelector('.search-container');
-    const search = document.querySelector('.search');
-
-    container.insertBefore(div, search);
-
-    setTimeout(() => {
-      this.clearAlert();
-    }, 3000);
-  }
-
-  clearAlert() {
-    const currentAlert = document.querySelector('.alert');
-
-    if(currentAlert) {
-      currentAlert.remove();
-    }
-  }
-
-  clearProfile() {
+  clearImage() {
     this.results.innerHTML = '';
   }
 }

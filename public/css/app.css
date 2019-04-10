@@ -17,39 +17,6 @@ a{
   justify-content: center;
   align-items: center;
 }
-.image-results{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  justify-content: space-evenly;
-}
-
-.img-list a {
-  margin: auto;
-  width: 500px;
-  height: 100vh;
-  padding: 20px;
-  float: inherit;
-  transition: .5s ease;
-}
-.instruction-text{
-  text-align: center;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
- .middle {
-  transition: .5s ease;
-  opacity: 0;
-  color: white;
-  font-size: 30px;
-  transform: translateY(-150px);
-   -ms-transform: translateY(-150px);
-  text-align: center;
-  background-color: rgba(255,255,255,.15);
-  text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
  .image-list:hover {
   opacity: 0.3;
@@ -64,7 +31,7 @@ input[type=text] {
   width: 300px;
   height: 50px;
   font-size: 30px;
-  color: white;
+  color: #000;
   text-align: center;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
@@ -75,70 +42,12 @@ input[type=text] {
 
 
 input[type=text]:focus {
-  width: 600px;
+  width: 400px;
   outline: none;
 }
 
 
 ::placeholder {
-  color: white;
+  color: #000;
   font-weight: lighter;
 }
-
-
-.btn-warning{
-  color: #fff;
-  font-size: 2.4rem;
-  background-color: rgba(255,255,255,.15);
-  border: 2px solid rgba(255,255,255,.15) ;
-  border-radius: 50%;
-  outline: none;
-  transition: all 0.3s
-}
-
-.btn-warning:active{
-  background-color: rgb(28, 141, 107);
-  opacity: 0;
-  transition: all 0.2s
-}
-
-.search-container{
-  display: flex;
-}
-
-@media only screen and (max-width : 375px) {
-
-input[type=text] {
-  width: 200px;
-  height: 50px;
-  font-size: 30px;
-  color: white;
-  text-align: center;
-  -webkit-transition: width 0.4s ease-in-out;
-  background-color: rgba(255,255,255,.15);
-  border: 2px solid rgba(255,255,255,.15) ;
-  border-radius: 25px;
-}
-
-.image-results{
-  display: flex;
-  flex-wrap: wrap;
-  width: 200px;
-  margin-left: 45px;
-}
-::placeholder {
-  color: white;
-  font-weight: lighter;
-  font-size: 25px;
-}
-.btn-warning{
-  font-size: 2.4rem;
-  background-color: rgba(255,255,255,.15);
-  border-radius: 50%;
-  outline: none;
-}
-input[type=text]:focus {
-  width: 300px;
-  outline: none;
-}
-  }
