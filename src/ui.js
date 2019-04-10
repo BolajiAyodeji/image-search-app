@@ -13,11 +13,11 @@ class UI {
        <div class="card mt-2" style="width: 50rem;">
         <img class="card-img-top" src="${img.urls.regular}" alt="${img.description}">
        <div class="card-body">
-        <h5 class="card-title">
+        <h6 class="card-title">
          Photo by: <a href="${img.user.links.html}?utm_source=image-search-app&utm_medium=referral" target="_blank">${img.user.name}</a>
          on <a href="https://unsplash.com/?utm_source=image-search-app&utm_medium=referral" target="_blank">Unsplash</a>
-        </h5>
-        <a href="${img.links.download}" class="btn btn-primary">Download Image</a>
+        </h6>
+        <a href="${img.links.download}" class="btn btn-primary">⤵ Download</a>
      </div>
     </div>
   </div>

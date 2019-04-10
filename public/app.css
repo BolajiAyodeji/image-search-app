@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400');
-
+@import url('twemoji-awesome.css');
+.twa-heart {
+  background-image: url("https://twemoji.maxcdn.com/2/svg/2764.svg"); }
 body{
   background-color: #78c2ad;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%232aeb5e' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%232fd35d' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2300df75' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%2300c471' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2300d386' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%2300b37d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%2300c692' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%2300a284' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%2300b899' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23009184' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%2322aa9a' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23217f7d' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
@@ -9,6 +11,7 @@ body{
 }
 a {
   text-decoration: none;
+  color: #000 !important;
 }
 a:hover {
   text-decoration: none;

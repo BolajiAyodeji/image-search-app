@@ -7257,7 +7257,7 @@ function () {
     value: function showImage(image) {
       var output = '';
       image.map(function (img) {
-        output += "\n     <div class=\"image-results\">\n       <div class=\"card mt-2\" style=\"width: 50rem;\">\n        <img class=\"card-img-top\" src=\"".concat(img.urls.regular, "\" alt=\"").concat(img.description, "\">\n       <div class=\"card-body\">\n        <h5 class=\"card-title\">\n         Photo by: <a href=\"").concat(img.user.links.html, "?utm_source=image-search-app&utm_medium=referral\" target=\"_blank\">").concat(img.user.name, "</a>\n         on <a href=\"https://unsplash.com/?utm_source=image-search-app&utm_medium=referral\" target=\"_blank\">Unsplash</a>\n        </h5>\n        <a href=\"").concat(img.links.download, "\" class=\"btn btn-primary\">Download Image</a>\n     </div>\n    </div>\n  </div>\n      ");
+        output += "\n     <div class=\"image-results\">\n       <div class=\"card mt-2\" style=\"width: 50rem;\">\n        <img class=\"card-img-top\" src=\"".concat(img.urls.regular, "\" alt=\"").concat(img.description, "\">\n       <div class=\"card-body\">\n        <h6 class=\"card-title\">\n         Photo by: <a href=\"").concat(img.user.links.html, "?utm_source=image-search-app&utm_medium=referral\" target=\"_blank\">").concat(img.user.name, "</a>\n         on <a href=\"https://unsplash.com/?utm_source=image-search-app&utm_medium=referral\" target=\"_blank\">Unsplash</a>\n        </h6>\n        <a href=\"").concat(img.links.download, "\" class=\"btn btn-primary\">\u2935 Download</a>\n     </div>\n    </div>\n  </div>\n      ");
       });
       this.results.innerHTML = output;
     }
