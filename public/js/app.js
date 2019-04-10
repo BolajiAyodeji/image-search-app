@@ -13,7 +13,6 @@ searchImg.addEventListener('keyup', (e) => {
         if(res.message === 'Not Found') {
           console.log(res.image.message);
         }  else {
-          console.log(res);
           ui.showImage(res);
         }
       })

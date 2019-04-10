@@ -9,21 +9,19 @@ class UI {
 
     image.map((img) => {
        output += `
-      <div class="image-results">
-        <div>
-          <a href ="${img.user.links.html}" alt="${img.links.self}" target="_blank">
-            <img class="img-list" src="${img.urls.small}" alt="${img.description}"
-              key=${img.id}/>
-              </a>
-              <p class="text">${img.user.username}</p>
-            <button class="btn btn-info"><a href="${img.links.download}"></a></button>
-                </div>
-        </div>
+<div class="image-results">
+       <div class="card mt-2" style="width: 50rem;">
+  <img class="card-img-top" src="${img.urls.regular}" alt="${img.description}">
+  <div class="card-body">
+    <h5 class="card-title">Photo by: <a href="${img.user.links.html}?utm_source=your_app_name&utm_medium=referral">${img.user.name}</a> on <a href="https://unsplash.com/?utm_source=your_app_name&utm_medium=referral">Unsplash</a></h5>
+    <a href="${img.links.download}" class="btn btn-primary">Download Image</a>
+  </div>
+</div>
+</div>
       `;
     });
     this.results.innerHTML = output;
   }
-
 
   clearImage() {
     this.results.innerHTML = '';
