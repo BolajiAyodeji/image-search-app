@@ -14,8 +14,9 @@ searchImg.addEventListener('keyup', (e) => {
   if(searchQuery !== '') {
     unsplash.getImage(searchQuery)
       .then(res => {
-        if (res === '[]') {
+        if (res.length === 0) {
           ui.showAlert('Oops! keyword not found...', 'alert alert-danger');
+          ui.clearImage();
         } else {
         ui.showImage(res);
         }

@@ -7203,8 +7203,9 @@ searchImg.addEventListener('keyup', function (e) {
 
   if (searchQuery !== '') {
     unsplash.getImage(searchQuery).then(function (res) {
-      if (res === '[]') {
+      if (res.length === 0) {
         ui.showAlert('Oops! keyword not found...', 'alert alert-danger');
+        ui.clearImage();
       } else {
         ui.showImage(res);
       }
