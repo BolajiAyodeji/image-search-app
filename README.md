@@ -7,3 +7,6 @@ npm install
 ```bash
 npm run build
 ```
+
+# Demo
+![](public/img/demo.gif)
