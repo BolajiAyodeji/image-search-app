@@ -10,14 +10,14 @@ searchImg.addEventListener('keyup', (e) => {
   if(searchQuery !== '') {
     unsplash.getImage(searchQuery)
       .then(res => {
-        if(res.message === 'Not Found') {
-          ui.showAlert('Keyword not found', 'alert alert-danger');
-        }  else {
-          ui.showImage(res);
-        }
+        ui.showImage(res);
       })
       .catch(err => {
-        ui.showAlert('Something went wrong, check your connection and try again...', 'alert alert-danger');
+        if(err.message === 'Unexpected token R in JSON at position 0') {
+          ui.showAlert('Oops! Invalid keyword', 'alert alert-danger');
+        } else {
+          ui.showAlert('Something went wrong, check your connection and try again...', 'alert alert-danger');
+        }
       })
   } else {
     ui.clearImage();
