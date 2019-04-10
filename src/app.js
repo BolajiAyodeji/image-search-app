@@ -1,26 +1,41 @@
 
-const github = new GitHub;
+import "@babel/polyfill";
+import UI from './ui';
+import Unsplash from './unsplash';
+
+const unsplash = new Unsplash;
 const ui = new UI;
 
-const searchUser = document.getElementById('searchUser');
+const searchImg = document.getElementById('searchImg');
 
-searchUser.addEventListener('keyup', (e) => {
-  const userText = e.target.value;
+searchImg.addEventListener('keyup', (e) => {
+  const searchQuery = e.target.value;
 
-  if(userText !== '') {
-    github.getUser(userText)
-      .then(data => {
-        if(data.profile.message === 'Not Found') {
-          ui.showAlert('User not found', 'alert alert-danger');
-        }  else {
-          ui.showProfile(data.profile);
-          ui.showRepos(data.repos);
+  if(searchQuery !== '') {
+    unsplash.getImage(searchQuery)
+      .then(res => {
+        if (res === '[]') {
+          ui.showAlert('Oops! keyword not found...', 'alert alert-danger');
+        } else {
+        ui.showImage(res);
         }
       })
       .catch(err => {
-        ui.showAlert('Network error, check your connection and try again...', 'alert alert-danger');
+        if(err.message === 'Unexpected token R in JSON at position 0') {
+          ui.showAlert('Something went wrong, cannot connect to server...', 'alert alert-danger');
+        } else {
+          ui.showAlert('Something went wrong, check your connection and try again...', 'alert alert-danger');
+        }
       })
   } else {
-    ui.clearProfile();
+    ui.clearImage();
   }
 })
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./sw.js').then(function() {
+      console.log('Service Worker Registered')
+    })
+  })
+}

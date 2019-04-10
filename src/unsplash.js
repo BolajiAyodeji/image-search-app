@@ -1,28 +1,23 @@
 
-require('dotenv').config()
+import { ACCESS_KEY } from "babel-dotenv"
 
-class GitHub {
+class Unsplash {
 
   constructor()  {
-    this.client_id = 'process.env.CLIENT_ID';
-    this.client_secret = 'process.env.CLIENT_SECRET';
-    this.repos_count = 10;
-    this.repos_sort = 'created:asc';
+    this.access_key = ACCESS_KEY;
   }
 
-  async getUser(user) {
-    const profileResponse = await fetch
-    (`https://api.github.com/users/${user}?client_id=${this.client_id}&client_secret=${this.client_secret}`);
+  async getImage(query) {
+    const responseData = await fetch
+    (`https://api.unsplash.com/search/photos/?client_id=${this.access_key}&per_page=20&orientation=landscape&query=${query}}`);
 
-    const repoResponse = await fetch
-    (`https://api.github.com/users/${user}/repos?per_page=${this.repos_count}&sort=${this.repos_sort}&client_id=${this.client_id}&client_secret=${this.client_secret}`);
 
-    const profile = await profileResponse.json();
-    const repos = await repoResponse.json();
+    let res = await responseData.json();
 
-    return {
-      profile,
-      repos
-    }
+    const image = res.results;
+
+    return image;
   }
 }
+
+export default Unsplash;
