@@ -11,13 +11,13 @@ searchImg.addEventListener('keyup', (e) => {
     unsplash.getImage(searchQuery)
       .then(res => {
         if(res.message === 'Not Found') {
-          console.log(res.image.message);
+          ui.showAlert('Keyword not found', 'alert alert-danger');
         }  else {
           ui.showImage(res);
         }
       })
       .catch(err => {
-        console.log(err);
+        ui.showAlert('Something went wrong, check your connection and try again...', 'alert alert-danger');
       })
   } else {
     ui.clearImage();

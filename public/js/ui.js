@@ -23,6 +23,31 @@ class UI {
     this.results.innerHTML = output;
   }
 
+  showAlert(msg, cN) {
+    this.clearAlert();
+
+    const div = document.createElement('div');
+    div.className = cN;
+    div.appendChild(document.createTextNode(msg));
+
+    const container = document.querySelector('.search-container');
+    const search = document.querySelector('.search');
+
+    container.insertBefore(div, search);
+
+    setTimeout(() => {
+      this.clearAlert();
+    }, 3000);
+  }
+
+  clearAlert() {
+    const currentAlert = document.querySelector('.alert');
+
+    if(currentAlert) {
+      currentAlert.remove();
+    }
+  }
+
   clearImage() {
     this.results.innerHTML = '';
   }
