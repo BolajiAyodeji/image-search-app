@@ -17,7 +17,7 @@ class UI {
          Photo by: <a href="${img.user.links.html}?utm_source=image-search-app&utm_medium=referral" target="_blank">${img.user.name}</a>
          on <a href="https://unsplash.com/?utm_source=image-search-app&utm_medium=referral" target="_blank">Unsplash</a>
         </h6>
-        <a href="${img.links.download}" class="btn btn-primary">⤵ Download</a>
+        <a class="btn btn-primary" href="${img.links.download}" download>⤵ Download</a>
      </div>
     </div>
   </div>
