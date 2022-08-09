@@ -11,6 +11,7 @@ body{
 }
 h2.copyright{
   font-size: 1rem;
+  color: black;
 }
 a {
   text-decoration: none;
@@ -53,4 +54,7 @@ input[type=text]:focus {
 ::placeholder {
   color: #000;
   font-weight: lighter;
+}
+.lead {
+  color: rgb(1, 34, 1);
 }
