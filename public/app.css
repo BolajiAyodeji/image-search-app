@@ -33,6 +33,7 @@ a:hover {
   flex-wrap: wrap;
   padding: 20px;
   justify-content: space-evenly;
+  width: 60%;
 }
 input[type=text] {
   width: 85%;
