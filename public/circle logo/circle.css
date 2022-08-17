@@ -1,0 +1,87 @@
+.circle{
+    background: aquamarine;
+    width: 500px;
+    height: 450px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    text-align: center;
+    margin: 0 auto;
+}
+h1{
+    color: blue;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+
+.border{
+   border-style: none;
+   border: hidden;
+   box-sizing: border-box;
+}
+
+.form-div{
+    width: 300px;
+    height: 120px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.form-forget{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: right;
+    /*padding: 20px*/
+    /*border: 3px  solid red;*/
+    margin: 0 auto;
+}
+.form-div-item{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.form-div-item-input{
+    background: none;
+    border: none;
+    border-bottom: 2px solid blue;
+    outline: none;
+}
+.form-div-text{
+    color: blue;
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.padding{
+    padding: 20px;
+    width: 600px;
+    text-decoration: none;
+    text-decoration: underline aquamarine;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.form-item{
+    background-color: blue;
+    width: 200px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    color: white;
+    border: none;
+}
+
+.td{
+   text-decoration:aqua;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.sing {
+    padding: 16px;
+   outline: none;
+
+}
+
+.form-item:hover
+{
+background: linear-gradient( blue, green)
+}
