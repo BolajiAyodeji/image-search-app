@@ -1,0 +1,135 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+
+
+/* Product describtion */
+
+.main {
+    border: 5px solid black;
+    width: 825px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.title {
+    text-align: center;
+    background-color: rgb(235, 232, 232);
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 0;
+}
+
+.box-info {
+    margin-top: 40px;
+    flex: 1;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 16px;
+}
+
+.ship {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #777;
+    /* margin-bottom: 10px; */
+}
+
+information:link {
+    color: #141414;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.color {
+    background-color: #0b0c0c;
+    height: 22px;
+    width: 22px;
+}
+
+.content {
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.color-blue {
+    background-color: rgb(28, 99, 231);
+}
+
+.color-red {
+    background-color: #f81515;
+}
+
+.color-yellow {
+    background-color: #e9ec0a;
+}
+
+.color-green {
+    background-color: #0c9629;
+}
+
+.color-brown {
+    background-color: brown;
+}
+
+.product-details {
+    margin-top: 20px;
+    flex: 1;
+}
+
+.box-title {
+    text-transform: uppercase;
+    font-size: 16px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.con-list {
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.ditails-list li {
+    margin-bottom: 16px;
+}
+
+.submit {
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border-top: 4px solid #0b0c0c;
+}
+
+.submit:hover {
+    background-color: #fff;
+    color: black;
+}
+
+p {
+    font-family: sans-serif;
+    font-style: normal;
+    font-size: small;
+}
+
+.main-items {
+    display: flex;
+    gap: 40px;
+}
+
+.box-colors {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
