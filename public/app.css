@@ -54,3 +54,8 @@ input[type=text]:focus {
   color: #000;
   font-weight: lighter;
 }
+
+#img_sizing{
+  width: 200px;
+}
+
